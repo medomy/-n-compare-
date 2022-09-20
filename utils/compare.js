@@ -17,7 +17,7 @@ function getDifferencies(req, res, next) {
         console.log(text_verses);
         // to filter the verses different from real
         const _potentially_wrong = text_verses.filter((ve,i)=> ve.aya_text !== real_verses[i].aya_text);
-        res.json(_potentially_wrong);
+        res.json({potential_wrong:_potentially_wrong , len : _potentially_wrong.length});
     } catch (err) {
         res.json(err);
         console.log(err);
