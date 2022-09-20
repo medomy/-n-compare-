@@ -10,5 +10,5 @@ app.listen(port , ()=>{
 })
 // to call the compare 
 app.get('/compare',comp.compare);
-// to get the difference
-app.get('/compare/differ' , comp.getDifferencies);
+// to get the difference without spacings
+app.get('/compare/differ' , comp.getDifferencieswithoutSpaces);
